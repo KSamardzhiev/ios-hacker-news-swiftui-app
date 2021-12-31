@@ -16,6 +16,10 @@
 		F8451615277E2AF100201CB7 /* H4X0RNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8451614277E2AF100201CB7 /* H4X0RNewsTests.swift */; };
 		F845161F277E2AF100201CB7 /* H4X0RNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845161E277E2AF100201CB7 /* H4X0RNewsUITests.swift */; };
 		F8451621277E2AF100201CB7 /* H4X0RNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8451620277E2AF100201CB7 /* H4X0RNewsUITestsLaunchTests.swift */; };
+		F845162F277E2E1E00201CB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845162E277E2E1E00201CB7 /* NetworkManager.swift */; };
+		F8451631277E303900201CB7 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8451630277E303900201CB7 /* PostData.swift */; };
+		F8451634277E39D800201CB7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8451633277E39D800201CB7 /* DetailView.swift */; };
+		F8451638277F22FB00201CB7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8451637277F22FB00201CB7 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,11 @@
 		F845161A277E2AF100201CB7 /* H4X0RNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = H4X0RNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F845161E277E2AF100201CB7 /* H4X0RNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4X0RNewsUITests.swift; sourceTree = "<group>"; };
 		F8451620277E2AF100201CB7 /* H4X0RNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4X0RNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F845162E277E2E1E00201CB7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F8451630277E303900201CB7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		F8451633277E39D800201CB7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F8451637277F22FB00201CB7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F8451639277F24AC00201CB7 /* H4X0RNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H4X0RNews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +107,10 @@
 		F84515FD277E2AED00201CB7 /* H4X0RNews */ = {
 			isa = PBXGroup;
 			children = (
+				F8451639277F24AC00201CB7 /* H4X0RNews.entitlements */,
+				F845162D277E2E0C00201CB7 /* Models */,
 				F84515FE277E2AED00201CB7 /* H4X0RNewsApp.swift */,
-				F8451600277E2AED00201CB7 /* ContentView.swift */,
+				F8451632277E39B100201CB7 /* Views */,
 				F8451602277E2AF100201CB7 /* Assets.xcassets */,
 				F8451607277E2AF100201CB7 /* Persistence.swift */,
 				F8451609277E2AF100201CB7 /* H4X0RNews.xcdatamodeld */,
@@ -131,6 +142,25 @@
 				F8451620277E2AF100201CB7 /* H4X0RNewsUITestsLaunchTests.swift */,
 			);
 			path = H4X0RNewsUITests;
+			sourceTree = "<group>";
+		};
+		F845162D277E2E0C00201CB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F845162E277E2E1E00201CB7 /* NetworkManager.swift */,
+				F8451630277E303900201CB7 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8451632277E39B100201CB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8451600277E2AED00201CB7 /* ContentView.swift */,
+				F8451633277E39D800201CB7 /* DetailView.swift */,
+				F8451637277F22FB00201CB7 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8451608277E2AF100201CB7 /* Persistence.swift in Sources */,
+				F8451638277F22FB00201CB7 /* WebView.swift in Sources */,
+				F8451631277E303900201CB7 /* PostData.swift in Sources */,
 				F845160B277E2AF100201CB7 /* H4X0RNews.xcdatamodeld in Sources */,
+				F8451634277E39D800201CB7 /* DetailView.swift in Sources */,
+				F845162F277E2E1E00201CB7 /* NetworkManager.swift in Sources */,
 				F8451601277E2AED00201CB7 /* ContentView.swift in Sources */,
 				F84515FF277E2AED00201CB7 /* H4X0RNewsApp.swift in Sources */,
 			);
@@ -354,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -409,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0RNews/H4X0RNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0RNews/Preview Content\"";
@@ -435,13 +470,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ksamardzhiev.H4X0RNews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksamardzhiev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0RNews/H4X0RNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0RNews/Preview Content\"";
@@ -464,13 +505,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ksamardzhiev.H4X0RNews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksamardzhiev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
